@@ -13,7 +13,7 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     document.querySelector('.message').textContent = 'No number';
   }
-  //if the number is the same
+  //if the number is the correct
   else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'Correct Number';
     document.querySelector('body').style.backgroundColor = 'green';
@@ -21,6 +21,7 @@ document.querySelector('.check').addEventListener('click', function () {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
+    //if the number is not the correct
   } else if (guess !== secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent =
